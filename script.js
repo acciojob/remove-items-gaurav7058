@@ -1,8 +1,18 @@
-//your JS code here. If required.
-let colorList=document.getElementById("colorSelect");
+let removeItem=document.getElementById("removeButton");
+const colorSelect = document.getElementById('colorSelect');
 
-colorList.addEventListener("click",()=>{
-	for (let i = 0; i < colorList.length; i++) {
-		colorList[i].remove();
-	}
-})  
+removeItem.addEventListener("click",()=>{
+	const selectedIndex = colorSelect.selectedIndex;
+	if (selectedIndex !== -1) {
+        colorSelect.remove(selectedIndex); 
+    }
+})
+
+// document.getElementById('removeButton').addEventListener('click', function() {
+//     const colorSelect = document.getElementById('colorSelect');
+//     const selectedIndex = colorSelect.selectedIndex;
+    
+//     if (selectedIndex !== -1) {
+//         colorSelect.remove(selectedIndex); 
+//     }
+// });
